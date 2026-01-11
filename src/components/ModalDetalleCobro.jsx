@@ -25,7 +25,7 @@ export default function ModalDetalleCobro({ vehiculo, config, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex justify-center items-center z-50 p-4 animate-fade-in">
       <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700/50 rounded-2xl p-8 w-full max-w-3xl shadow-2xl text-gray-200 animate-slide-in">
         <div id="imprimir-detalle" className="space-y-4">
           <h3 className="text-3xl font-bold text-center mb-6 text-gray-100 tracking-tight">

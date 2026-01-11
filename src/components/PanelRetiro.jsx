@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { calcularCobro } from "../data/utils";
-import ModalDetalleCobro from "./ModalDetalleCobro";
 import Swal from "sweetalert2";
 
-export default function PanelRetiro({ espacio, config, onRetirar }) {
-  const [detalleOpen, setDetalleOpen] = useState(false);
+export default function PanelRetiro({ espacio, config, onRetirar, onDetalleOpen }) {
 
   const activo = espacio && !espacio.libre;
   const total = activo ? calcularCobro(espacio.vehiculo, config).total : 0;
@@ -55,10 +52,10 @@ export default function PanelRetiro({ espacio, config, onRetirar }) {
                          transition-all duration-200 rounded-xl py-3 font-semibold shadow-lg shadow-green-900/30
                          hover:shadow-xl hover:shadow-green-900/40 active:scale-[0.98]"
             >
-              Confirmar
+              Retirar
             </button>
             <button
-              onClick={() => setDetalleOpen(true)}
+              onClick={onDetalleOpen}
               className="flex-1 bg-gray-700/80 hover:bg-gray-600/80 
                          transition-all duration-200 rounded-xl py-3 font-semibold border border-gray-600/50
                          hover:border-gray-500 active:scale-[0.98]"
@@ -71,14 +68,6 @@ export default function PanelRetiro({ espacio, config, onRetirar }) {
         <div className="text-center text-gray-400 py-12">
           <p className="text-sm font-medium">Esperando selección de vehículo</p>
         </div>
-      )}
-
-      {detalleOpen && activo && (
-        <ModalDetalleCobro
-          vehiculo={espacio.vehiculo}
-          config={config}
-          onClose={() => setDetalleOpen(false)}
-        />
       )}
     </aside>
   );

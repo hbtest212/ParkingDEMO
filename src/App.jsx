@@ -3,6 +3,7 @@ import PanelConfig from "./components/PanelConfig";
 import ParkingGrid from "./components/ParkingGrid";
 import PanelRetiro from "./components/PanelRetiro";
 import ModalRegistro from "./components/ModalRegistro";
+import ModalDetalleCobro from "./components/ModalDetalleCobro";
 import Swal from "sweetalert2";
 import { VEHICLES_URL, SETTINGS_URL, LOGS_URL } from "./data/data.js";
 
@@ -11,6 +12,7 @@ export default function App() {
   const [estacionamiento, setEstacionamiento] = useState([]);
   const [espacioSeleccionado, setEspacioSeleccionado] = useState(null);
   const [modalRegistroOpen, setModalRegistroOpen] = useState(false);
+  const [modalDetalleOpen, setModalDetalleOpen] = useState(false);
   const [tipo, setTipo] = useState("Auto");
   const [patente, setPatente] = useState("");
   const [logs, setLogs] = useState([]);
@@ -248,6 +250,7 @@ export default function App() {
           espacio={espacioSeleccionado}
           config={config}
           onRetirar={handleRetiro}
+          onDetalleOpen={() => setModalDetalleOpen(true)}
         />
       </div>
 
@@ -261,6 +264,14 @@ export default function App() {
         setPatente={setPatente}
         onRegister={handleRegister}
       />
+
+      {modalDetalleOpen && espacioSeleccionado && !espacioSeleccionado.libre && (
+        <ModalDetalleCobro
+          vehiculo={espacioSeleccionado.vehiculo}
+          config={config}
+          onClose={() => setModalDetalleOpen(false)}
+        />
+      )}
     </div>
   );
 }
