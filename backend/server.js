@@ -14,10 +14,12 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://parkingarg.onrender.com", // tu frontend en Render
-    "http://localhost:5173"            // tu frontend local (si usas Vite)
+    "https://parkingarg.onrender.com",      // frontend en Render
+    "http://localhost:5173",                 // frontend local
+    "https://parkingargfinal.vercel.app"    // frontend en Vercel
   ]
 }));
+
 
 app.use(express.json());
 
