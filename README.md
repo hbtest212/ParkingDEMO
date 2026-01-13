@@ -1,16 +1,95 @@
-# React + Vite
+ParkingArg es una aplicación web para la gestión de estacionamientos, construida con MERN stack (MongoDB, Express, React, Node.js) y varias librerías de UI para mejorar la experiencia de usuario.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Características:
+-Registro y gestión de vehículos (autos y motos).
+-Control de espacios disponibles en tiempo real.
+-Cálculo automático de tarifas según el tiempo de estacionamiento.
+-Panel de administración para ajustes de precios y cantidad de espacios.
+-Interfaz responsive y amigable, utilizando librerías de UI modernas.
 
-Currently, two official plugins are available:
+Tecnologías:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+_Backend_
+-Node.js
+-Express.js
+-MongoDB (Atlas)
+-Mongoose
+-CORS, dotenv
 
-## React Compiler
+_Frontend_
+-React.js
+-Librerías de UI
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+_Herramientas adicionales_
+-Git/GitHub para control de versiones
+-ESLint para estilo de código
+-VITE bundler
+-RESTclient test api
 
-## Expanding the ESLint configuration
+Instalación:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar el repo:
+git clone https://github.com/tuusuario/parkingarg.git
+
+2. Backend:
+cd backend
+npm install
+npm run dev
+
+3. Frontend:
+cd frontend
+npm install
+npm run dev
+
+NOTA: Antes de correr el backend, crea un archivo llamado .env dentro de la carpeta backend con las variables necesarias:
+PORT=3000
+MONGO_URI=<tu_mongo_uri>
+
+ORGANIZACION DEL DESARROLLO:
+parkingarg/
+│
+├─ backend/
+│  ├─ models/
+│  │  ├─ Logs.js
+│  │  ├─ Settings.js
+│  │  └─ Vehicle.js
+│  │
+│  ├─ routes/
+│  │  ├─ logs.js
+│  │  ├─ setting.js
+│  │  └─ vehicles.js
+│  │
+│  ├─ package.json
+│  ├─ server.js
+│  └─ test.http
+│
+├─ frontend/
+│  ├─ public/
+│  │  ├─ demo/
+│  │  │  └─ <video_demo.mp4>
+│  │  └─ imgs/  (vacía)
+│  │
+│  ├─ src/
+│  │  ├─ componentes/
+│  │  │  ├─ Login.jsx
+│  │  │  ├─ ModalDetalleCobro.jsx
+│  │  │  ├─ ModalRegistro.jsx
+│  │  │  ├─ ModelRetiro.jsx
+│  │  │  ├─ PanelConfig.jsx
+│  │  │  ├─ PanelRetiro.jsx
+│  │  │  └─ ParkingGrid.jsx
+│  │  │
+│  │  ├─ data/
+│  │  │  ├─ data.js
+│  │  │  └─ utils.js
+│  │  │
+│  │  ├─ App.jsx
+│  │  ├─ main.jsx
+│  │  ├─ index.css
+│  │  ├─ index.html
+│  │  ├─ eslint.config.js
+│  │  ├─ package.json
+│  │  └─ vite.config.js
+│
+├─ .gitignore
+└─ README.md
