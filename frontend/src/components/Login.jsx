@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 
+
 // Credenciales (puedes cambiarlas aquí)
-const USERNAME = "test";
-const PASSWORD = "test123";
+const USERNAME = import.meta.env.VITE_USERNAME;
+const PASSWORD = import.meta.env.VITE_PASSWORD;
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
