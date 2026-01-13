@@ -47,42 +47,43 @@ MONGO_URI=<tu_mongo_uri>
 
 ORGANIZACIÓN DEL DESARROLLO:
 
+```plaintext
 parkingarg/
-├─ backend/
-│  ├─ models/
-│  │  ├─ Logs.js
-│  │  ├─ Settings.js
-│  │  └─ Vehicle.js
-│  ├─ routes/
-│  │  ├─ logs.js
-│  │  ├─ setting.js
-│  │  └─ vehicles.js
-│  ├─ package.json
-│  ├─ server.js
-│  └─ test.http
-├─ frontend/
-│  ├─ public/
-│  │  ├─ demo/
-│  │  │  └─ <video_demo.mp4>
-│  │  └─ imgs/ (vacía)
-│  ├─ src/
-│  │  ├─ componentes/
-│  │  │  ├─ Login.jsx
-│  │  │  ├─ ModalDetalleCobro.jsx
-│  │  │  ├─ ModalRegistro.jsx
-│  │  │  ├─ ModelRetiro.jsx
-│  │  │  ├─ PanelConfig.jsx
-│  │  │  ├─ PanelRetiro.jsx
-│  │  │  └─ ParkingGrid.jsx
-│  │  ├─ data/
-│  │  │  ├─ data.js
-│  │  │  └─ utils.js
-│  │  ├─ App.jsx
-│  │  ├─ main.jsx
-│  │  ├─ index.css
-│  │  ├─ index.html
-│  │  ├─ eslint.config.js
-│  │  ├─ package.json
-│  │  └─ vite.config.js
-├─ .gitignore
-└─ README.md
+├── backend/
+│   ├── models/
+│   │   ├── Logs.js
+│   │   ├── Settings.js
+│   │   └── Vehicle.js
+│   ├── routes/
+│   │   ├── logs.js
+│   │   ├── setting.js
+│   │   └── vehicles.js
+│   ├── package.json
+│   ├── server.js
+│   └── test.http
+├── frontend/
+│   ├── public/
+│   │   ├── demo/
+│   │   │   └── <video_demo.mp4>
+│   │   └── imgs/ (vacía)
+│   ├── src/
+│   │   ├── componentes/
+│   │   │   ├── Login.jsx
+│   │   │   ├── ModalDetalleCobro.jsx
+│   │   │   ├── ModalRegistro.jsx
+│   │   │   ├── ModelRetiro.jsx
+│   │   │   ├── PanelConfig.jsx
+│   │   │   ├── PanelRetiro.jsx
+│   │   │   └── ParkingGrid.jsx
+│   │   ├── data/
+│   │   │   ├── data.js
+│   │   │   └── utils.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── index.css
+│   │   ├── index.html
+│   │   ├── eslint.config.js
+│   │   ├── package.json
+│   │   └── vite.config.js
+├── .gitignore
+└── README.md
