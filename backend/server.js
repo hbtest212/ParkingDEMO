@@ -14,9 +14,9 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://parkingarg.onrender.com",      // frontend en Render
+    "https://parkingdemo.onrender.com",      // frontend en Render
     "http://localhost:5173",                 // frontend local
-    "https://parkingargfinal.vercel.app"    // frontend en Vercel
+    "https://parkingdemo-nine.vercel.app"    // frontend en Vercel
   ]
 }));
 
